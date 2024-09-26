@@ -119,14 +119,31 @@ function App() {
                     image: ["https://live.staticflickr.com/65535/54023233409_86eb8b6052_k.jpg","https://live.staticflickr.com/65535/54022891256_8a60a7bab1_k.jpg","https://live.staticflickr.com/65535/54023344105_a785e89b44_b.jpg","https://live.staticflickr.com/65535/54023233399_c295d4735f_k.jpg", "https://live.staticflickr.com/65535/54023233389_999bae2a90_k.jpg"],
                     github: "https://github.com/ogabrielfelipe/funLearn",
                     stack: ["React.js", "Next.js", "Styled Components", "SASS", "Node.js", "Express.js", "Prisma"],
+                  },
+                  {
+                    title: "ws.service",
+                    description: "O objetivo do sistema é para realizar o controllhe de HelpDesks, onde o administrador poderia cadastrar a competência (mês vigente) e com isso os usuários poderiam realizar o cadastro de solicitantes, os sistemas que prestam suporte e os módulos, na virada do mês o administrador fecharia a competência e não poderia ser realizado mais nenhuma cadastro na competência anterior e o mesmo poderia exportar os atendimentos dos usuários.",
+                    image: [],
+                    github: "https://github.com/ogabrielfelipe/ws.service",
+                    stack: ["Python", "Flask", "Flask-SQLAlchemy"],
+                  },
+                  {
+                    title: "In.Orbt",
+                    description: "Projeto desenvolvido durante o evento da Rocketseat. O projeto teve como desafio desenvolver uma plataforma de metas, onde é possível cadastrar uma objetivo e colocar quantas vezes quer compri-lo na semana.",
+                    image: ["https://live.staticflickr.com/65535/54023250133_9ab080c9f1_b.jpg", "https://live.staticflickr.com/65535/54023347429_9247a30d32_h.jpg", "https://live.staticflickr.com/65535/54023007971_5d8642f1fa_h.jpg"],
+                    github: "https://github.com/ogabrielfelipe/nlw-in-orbit-frontend",
+                    stack: ["React.js", "Tailwind", "Node.js", "Fastify", "DrizzleORM"],
+                  },
+                  {
+                    title: "Daily Diet",
+                    description: "Desafio durante o curso de Node.js da Rocketseat, onde consiste em desenvolver o backend (API) de um sistema de Dieta.",
+                    image: [],
+                    github: "https://github.com/ogabrielfelipe/desafio-02-daily-diet",
+                    stack: ["Knex", "Node.js", "TypeScript", "Fastify"],
                   }
+
                 
               ].map((service, index) => (
-
-               
-                  
-
-
                 <CarouselItem key={index} className="md:basis-2/2 lg:basis-1/3">
                   <div className="p-1">
                     <Dialog>
@@ -147,9 +164,7 @@ function App() {
                             
                           </div>
 
-                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-xl">
-                            
-                                
+                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-xl">                               
                               <DialogHeader>
                                 <DialogTitle>Saiba mais sobre o projeto {service.title}</DialogTitle>
                               </DialogHeader>
@@ -183,11 +198,17 @@ function App() {
                           </DialogContent>
                         </CardContent> 
                         <div className="flex justify-center mb-6">
-                          <DialogTrigger asChild className="justify-center">
-                            <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
-                              Saiba Mais!
-                            </button>
-                          </DialogTrigger>
+                            {service.image.length !== 0 ? (
+                              <DialogTrigger asChild className="justify-center">
+                                <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
+                                  Saiba Mais!
+                                </button>
+                              </DialogTrigger>) :
+                              <a href={service.github} target="_blank" rel="noopener noreferrer" className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
+                                  Acesse o GitHub
+                              </a> 
+                            }
+                          
                         </div>
                       </Card>
 
