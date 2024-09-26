@@ -75,17 +75,23 @@ function App() {
       </header>
 
       <main className="flex-grow">
-        <section className="bg-gradient-to-b from-blue-900 to-black py-60 relative overflow-hidden">
+        <section className="flex flex-row flex-wrap  bg-gradient-to-b from-blue-900 to-black py-60 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMCBMNjAgNjBNMTEgMCBMNjAgNDlNMCAxMSBMNDkgNjAiIHN0cm9rZT0iIzBBQzdFNCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+')]"></div>
           </div>
-          <div className="container mx-auto text-center relative z-10">
-            <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+          <div className=" max-w-[600px] flex flex-col text-center justify-center container mx-auto  relative z-10">
+            <h1 className=" text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
             Pronto para transformar sua visão em realidade digital
             </h1>
-            <p className="text-xl mb-8 text-blue-200">Sou um desenvolvedor criativo independente de Cardoso Moreira, no sudeste do Brasil.</p>
-            
+            <p className="text-xl mb-8 text-blue-200">Desenvolvedor criativo que transforma desafios em oportunidades digitais, convertendo ideias em soluções tecnológicas.</p>
           </div>
+
+          <div className=" w-[550px] flex flex-col text-center justify-center container mx-auto  relative z-10 p-1 bg-gradient-to-r from-blue-600 to-cyan-400">
+            <img src="https://live.staticflickr.com/65535/54023588130_1fe3f31d99_b.jpg" alt="imagem gerada por inteligência a" />
+            <span className="p-2 text-justify">Imagem gerada por Inteligência Artificial. <p></p>
+              Prompt: Technology symbol, which has a futuristic appearance with purple colors and abstract</span>
+          </div>
+
         </section>
 
         <section id="about" className="py-80 bg-gradient-to-b from-black to-blue-900">
@@ -93,13 +99,11 @@ function App() {
             <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               Sobre mim
             </h2>
-            <p className="text-lg text-center max-w-2xl mx-auto text-blue-200">
+            <p className="text-lg  max-w-2xl mx-auto p-3 text-blue-200 text-justify ">
               Meu nome é Gabriel Felipe, sou formado em Sistemas de Informação e, terminando a Pós-Graduação em desenvolvimento Full-Stack com ênfase em JavaScript. Possuo mais de 3 anos de experiência na área de TI, sempre me dedicando estar buscando conhecimento com o intuito de me aperfeiçoar, minha abordagem combina criatividade técnica com um forte foco na resolução de problemas, permitindo-o enfrentar desafios complexos e entregar soluções de alta qualidade.
-            </p>
-
-            <p className="text-lg text-center max-w-2xl p-4 mx-auto text-blue-200">
+              <p className="p-2"></p>
               Acredito que a tecnologia tem o poder de transformar negócios e melhorar vidas. Minha missão é usar minhas habilidades e conhecimentos para criar soluções que façam a diferença, sempre buscando aprender e evoluir no processo.
-            </p>
+            </p>            
           </div>
         </section>
 
@@ -164,7 +168,7 @@ function App() {
                             
                           </div>
 
-                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-xl">                               
+                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-lg">                               
                               <DialogHeader>
                                 <DialogTitle>Saiba mais sobre o projeto {service.title}</DialogTitle>
                               </DialogHeader>
@@ -185,9 +189,10 @@ function App() {
                                 
                                 <DialogFooter className="sm:justify-center">
                                   <DialogClose asChild>
-                                    <button>
-                                      <a href={service.github} target="_blank" rel="noopener noreferrer" className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
-                                        Acesse o GitHub
+                                    <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
+                                      <a href={service.github} target="_blank" rel="noopener noreferrer" className="flex flex-row " >
+                                        <GitHubLogoIcon className="h-6 w-6 mr-3" />
+                                        <span>Acesse o GitHub</span>
                                       </a>
                                     </button>
                                   </DialogClose>
@@ -200,13 +205,16 @@ function App() {
                         <div className="flex justify-center mb-6">
                             {service.image.length !== 0 ? (
                               <DialogTrigger asChild className="justify-center">
-                                <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
+                                <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400  px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
                                   Saiba Mais!
                                 </button>
                               </DialogTrigger>) :
-                              <a href={service.github} target="_blank" rel="noopener noreferrer" className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 text-white px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
-                                  Acesse o GitHub
-                              </a> 
+                              <button className="text-blue-50 bg-gradient-to-r from-blue-500 to-cyan-400 px-8 py-3 rounded-full hover:from-blue-600 hover:to-cyan-500 transition shadow-lg hover:shadow-cyan-500/50">
+                              <a href={service.github} target="_blank" rel="noopener noreferrer" className="flex flex-row " >
+                                <GitHubLogoIcon className="h-6 w-6 mr-3" />
+                                <span>Acesse o GitHub</span>
+                              </a>
+                            </button>
                             }
                           
                         </div>
