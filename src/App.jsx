@@ -94,20 +94,11 @@ function App() {
               Sobre mim
             </h2>
             <p className="text-lg text-center max-w-2xl mx-auto text-blue-200">
-              Meu nome é Gabriel Felipe, mais de 3 anos de experiência na área de TI, me dedico a sempre estar buscando conhecimento,
-              minha abordagem combina criatividade técnica com um forte foco na resolução de problemas, permitindo-o enfrentar desafios 
-              complexos e entregar soluções de alta qualidade.
-              
+              Meu nome é Gabriel Felipe, sou formado em Sistemas de Informação e, terminando a Pós-Graduação em desenvolvimento Full-Stack com ênfase em JavaScript. Possuo mais de 3 anos de experiência na área de TI, sempre me dedicando estar buscando conhecimento com o intuito de me aperfeiçoar, minha abordagem combina criatividade técnica com um forte foco na resolução de problemas, permitindo-o enfrentar desafios complexos e entregar soluções de alta qualidade.
             </p>
 
             <p className="text-lg text-center max-w-2xl p-4 mx-auto text-blue-200">
-              Sou formado em Sistemas de Informação e, terminando a Pós-Graduação em desenvolvimento Full-Stack com ênfase em JavaScript.
-            </p>
-
-            <p className="text-lg text-center max-w-2xl mx-auto text-blue-200">
-              
-            Acredito que a tecnologia tem o poder de transformar negócios e melhorar vidas. Minha missão é usar minhas habilidades e conhecimentos 
-            para criar soluções que façam a diferença, sempre buscando aprender e evoluir no processo.
+              Acredito que a tecnologia tem o poder de transformar negócios e melhorar vidas. Minha missão é usar minhas habilidades e conhecimentos para criar soluções que façam a diferença, sempre buscando aprender e evoluir no processo.
             </p>
           </div>
         </section>
