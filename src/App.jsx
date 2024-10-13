@@ -107,7 +107,7 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="py-60 bg-black">
+        <section id="services" className="py-60 px-40 bg-black">
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               Projetos desenvolvidos
@@ -168,7 +168,7 @@ function App() {
                             
                           </div>
 
-                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-lg">                               
+                          <DialogContent className="bg-gradient-to-tr from-blue-900 to-blue-400 text-white border-transparent sm:max-w-screen-md">                               
                               <DialogHeader>
                                 <DialogTitle>Saiba mais sobre o projeto {service.title}</DialogTitle>
                               </DialogHeader>
