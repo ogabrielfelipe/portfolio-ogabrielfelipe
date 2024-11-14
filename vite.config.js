@@ -6,6 +6,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: "./",
+  server:{
+    host: true
+  },
   resolve: {
     alias: {
       // eslint-disable-next-line no-undef
