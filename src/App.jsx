@@ -136,7 +136,7 @@ function App() {
         </header>
 
         <main className="flex-grow particles-container">
-          <section className="py-60 relative overflow-hidden">
+          <section className="py-10 relative overflow-hidden">
             
             <div className="absolute inset-0 bg-gradient-to-b from-blue-900 to-black overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-1">
@@ -231,11 +231,11 @@ function App() {
                 </div>
               </div>
 
-              <div className="max-w-[550px] flex flex-col text-center justify-center container mx-auto m-5 relative z-10 bg-gradient-to-r from-blue-600 to-cyan-400">
+              <div className="max-w-96 flex flex-col text-center justify-center container mx-auto m-10 relative z-10 bg-gradient-to-r from-blue-600 to-cyan-400">
                 <img
                   src="https://live.staticflickr.com/65535/54023588130_1fe3f31d99_b.jpg"
                   alt="imagem gerada por inteligência representando uma visão digital"
-                  className="p-2"
+                  className="p-2 max-w-96"
                 />
                 <span className="p-2 text-justify">
                   Imagem gerada por Inteligência Artificial. <p></p>
@@ -305,33 +305,7 @@ function App() {
             `}</style>
           </section>
 
-          {/*<section className="flex flex-row flex-wrap  bg-gradient-to-b from-blue-900 to-black py-60 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMCBMNjAgNjBNMTEgMCBMNjAgNDlNMCAxMSBMNDkgNjAiIHN0cm9rZT0iIzBBQzdFNCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+')]"></div>
-            </div>
-            <div className=" max-w-[600px] flex flex-col text-center justify-center container mx-auto  relative z-10">
-              <h1 className=" text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Pronto para transformar sua visão em realidade digital
-              </h1>
-              <p className="text-xl mb-8 text-blue-200">
-                Desenvolvedor criativo que transforma desafios em oportunidades
-                digitais, convertendo ideias em soluções tecnológicas.
-              </p>
-            </div>
-
-            <div className=" max-w-[550px] flex flex-col text-center justify-center container mx-auto m-5  relative z-10 bg-gradient-to-r from-blue-600 to-cyan-400">
-              <img
-                src="https://live.staticflickr.com/65535/54023588130_1fe3f31d99_b.jpg"
-                alt="imagem gerada por inteligência representando uma visão digital"
-                className="p-2"
-              />
-              <span className="p-2 text-justify">
-                Imagem gerada por Inteligência Artificial. <p></p>
-                Prompt: Technology symbol, which has a futuristic appearance
-                with purple colors and abstract
-              </span>
-            </div>
-          </section>*/}
+          
 
           <section
             id="about"
@@ -482,10 +456,11 @@ function App() {
                                               />
                                             </DialogTrigger>
 
-                                            <DialogContent className="flex justify-center items-center max-w-screen h-auto m-auto bg-black/40 text-white border-none">
+                                            <DialogContent className="  flex justify-center items-center max-w-screen h-auto m-auto bg-black/40 text-white border-none">
                                               <img
                                                 src={image}
                                                 alt={service.title}
+                                                className="max-w-screen-lg"
                                               />
                                             </DialogContent>
                                           </Dialog>
